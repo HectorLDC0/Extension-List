@@ -1,0 +1,72 @@
+.card{
+    width: 300px;
+    height: 150px;
+    border-radius: 20px;
+    background-color: hsl(225.52deg 23.97% 23.73%) ;
+    border: 0.1px solid rgba(255, 255, 255, 0.575);
+    padding: 10px;
+}
+
+.toggle {
+  width: 50px;
+  height: 26px;
+  background-color: #444;
+  border-radius: 9999px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.toggle.active {
+  background-color: hsl(2.66deg 86.81% 64.31%);
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: left 0.3s;
+}
+
+.toggle.active .circle {
+  left: 27px;
+}
+
+.textWrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.textWrapper h2{
+  margin: 0px;
+}
+
+.textWrapper p{
+  margin: 0px;
+}
+
+.togleWrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.imgWrapper{
+  display: flex;
+  gap: 10px;
+  color: white;
+}
+
+.imgWrapper h2{
+  color: white;
+}
+
+.imgWrapper p{
+  color: rgba(255, 255, 255, 0.658);
+}

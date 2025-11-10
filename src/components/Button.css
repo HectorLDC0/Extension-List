@@ -1,0 +1,21 @@
+button {
+    border-radius: 15px;
+    padding: 5px 12px 5px 12px;
+    color: rgba(240, 248, 255, 0.774);
+    background-color: hsl(225.52deg 23.97% 23.73%);
+    border: solid 0.1px rgba(255, 255, 255, 0.575);
+    outline: none;
+    font-family: 'NotoSans', sans-serif;
+    font-weight: 500;
+}
+
+button:hover {
+    border-radius: 15px;
+    padding: 5px 12px 5px 12px;
+    color: black;
+    background-color: hsl(2.66deg 86.81% 64.31%);
+    border: solid 0.1px rgba(0, 0, 0, 0.575);
+    outline: none;
+    font-family: 'NotoSans', sans-serif;
+    font-weight: 500;
+}
