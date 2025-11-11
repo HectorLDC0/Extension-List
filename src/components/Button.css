@@ -19,3 +19,9 @@ button:hover {
     font-family: 'NotoSans', sans-serif;
     font-weight: 500;
 }
+
+button.active {
+    background-color: hsl(2.66deg 86.81% 64.31%);
+    color: black;
+    border: solid 0.1px rgba(0, 0, 0, 0.575);
+}
