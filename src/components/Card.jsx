@@ -1,7 +1,15 @@
 import './Card.css';
 import Button from './Button.jsx';
 
-function Card({ text, paragraph, imageUrl, active, onToggle }) {
+function Card({ text, paragraph, imageUrl, active, onToggle, onRemove }) {
+
+  const Remove = () => {
+    const ConfirmDelete = window.confirm(`Are you sure, you want to delete "${text}"?`);
+    if (ConfirmDelete) {
+      onRemove();
+    }
+  }
+
   return (
     <>
       <div className="card">
@@ -15,7 +23,7 @@ function Card({ text, paragraph, imageUrl, active, onToggle }) {
         </div>
 
         <div className="togleWrapper">
-          <Button text="Remove" />
+          <Button text="Remove" onClick={Remove} />
 
           {/* Toggle controlado pelo App */}
           <div

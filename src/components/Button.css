@@ -18,6 +18,7 @@ button:hover {
     outline: none;
     font-family: 'NotoSans', sans-serif;
     font-weight: 500;
+    cursor: pointer;
 }
 
 button.active {

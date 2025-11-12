@@ -29,6 +29,10 @@ function App() {
     );
   };
 
+  const removeCard = (id) => {
+    setExtensions((prev) => prev.filter((ext) => ext.id !== id));
+  };
+
   const filteredExtensions = extensions.filter((ext) => {
     if (filter === 'All') return true;
     if (filter === 'Active') return ext.active;
@@ -63,6 +67,7 @@ function App() {
             imageUrl={ext.imageUrl}
             active={ext.active}
             onToggle={() => toggleActive(ext.id)}
+            onRemove={() => removeCard(ext.id)}
           />
         ))}
       </div>

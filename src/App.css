@@ -1,37 +1,30 @@
 @font-face {
   font-family: 'NotoSans';
   src: url('/assets/fonts/NotoSans-VariableFont_wdth,wght.ttf') format('truetype');
-  font-weight: 100 900; 
+  font-weight: 100 900;
   font-style: normal;
 }
-
-@font-face {
-  font-family: 'NotoSansItalic';
-  src: url('/assets/fonts/NotoSans-Italic-VariableFont_wdth,wght.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: italic;
-}
-
 
 body {
   background: linear-gradient(180deg, #040918 0%, #091540 100%);
   margin: 0;
-  min-height: 100vh; 
+  min-height: 100vh;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
 
-.bar{
+.bar {
   background-color: hsl(223.64deg 26.19% 16.47%);
   border-radius: 20px;
-  padding: 20px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 5%;
 }
 
-.sun{
+.sun {
   background-color: hsl(225.52deg 23.97% 23.73%);
   padding: 10px;
   border-radius: 10px;
@@ -40,28 +33,30 @@ body {
   align-items: center;
 }
 
-.titleFilterWrapper{
+.titleFilterWrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 5%;
 }
 
-.titleFilterWrapper h1{
+.titleFilterWrapper h1 {
   color: aliceblue;
   font-family: 'NotoSans', sans-serif;
 }
 
-.buttonsWrapper{
+.buttonsWrapper {
   display: flex;
-  gap: 8px;  
+  gap: 8px;
 }
 
 .cardGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* ajusta automaticamente */
-  gap: 40px;               /* espaçamento entre cards */
-  justify-items: center;   /* centraliza os cards */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+  justify-items: center;
   align-items: start;
+  margin-bottom: 10%;
 }

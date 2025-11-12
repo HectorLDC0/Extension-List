@@ -1,10 +1,10 @@
-.card{
-    width: 300px;
-    height: 150px;
-    border-radius: 20px;
-    background-color: hsl(225.52deg 23.97% 23.73%) ;
-    border: 0.1px solid rgba(255, 255, 255, 0.575);
-    padding: 10px;
+.card {
+  width: 300px;
+  height: 150px;
+  border-radius: 20px;
+  background-color: hsl(225.52deg 23.97% 23.73%);
+  border: 0.1px solid rgba(255, 255, 255, 0.575);
+  padding: 10px;
 }
 
 .toggle {
@@ -36,38 +36,42 @@
   left: 27px;
 }
 
-.textWrapper{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.textWrapper h2{
+.textWrapper h2 {
   margin: 0px;
+  font-family: 'NotoSans', sans-serif;
+  font-weight: 700;
+  font-size: 14pt;
 }
 
-.textWrapper p{
+.textWrapper p {
   margin: 0px;
-  font-size: 10pt;
+  font-size: 8pt;
+  font-family: 'NotoSans', sans-serif;
 }
 
-.togleWrapper{
+.togleWrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 40px;
 }
 
-.imgWrapper{
+.imgWrapper {
   display: flex;
   gap: 10px;
   color: white;
 }
 
-.imgWrapper h2{
+.imgWrapper h2 {
   color: white;
 }
 
-.imgWrapper p{
+.imgWrapper p {
   color: rgba(255, 255, 255, 0.658);
 }
