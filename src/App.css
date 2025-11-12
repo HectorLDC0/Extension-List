@@ -31,6 +31,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 }
 
 .titleFilterWrapper {
@@ -54,9 +55,72 @@ body {
 
 .cardGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 40px;
   justify-items: center;
   align-items: start;
   margin-bottom: 10%;
+}
+
+/* WHITE MODE */
+body.white-mode {
+  background: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+  color: hsl(227, 75%, 14%);
+}
+
+.logo--white{
+  width: 180px;
+  height: 40px;
+}
+
+/* Barra */
+body.white-mode .bar {
+  background-color: hsl(217, 61%, 90%);
+}
+
+body.white-mode .titleFilterWrapper h1{
+  color: rgba(0, 0, 0, 0.781);
+  font-family: 'NotoSans', sans-serif;
+}
+
+body.white-mode .sun {
+  background-color: hsl(0, 0%, 93%);
+}
+
+/* Cards */
+body.white-mode .card {
+  background-color: hsl(0, 0%, 99%);
+  border: 1px solid hsl(0, 0%, 78%);
+}
+
+body.white-mode .textWrapper h2,
+body.white-mode .imgWrapper h2 {
+  color: hsl(227, 75%, 14%);
+}
+
+body.white-mode .imgWrapper p {
+  color: hsl(226, 11%, 37%);
+}
+
+/* Botões */
+body.white-mode button {
+  background-color: hsl(0, 0%, 93%);
+  color: hsl(227, 75%, 14%);
+  border: 1px solid hsl(0, 0%, 78%);
+}
+
+body.white-mode button:hover,
+body.white-mode button.active {
+  background-color: hsl(3, 86%, 64%);
+  color: white;
+  border: 1px solid hsl(3, 77%, 44%);
+}
+
+/* Toggle */
+body.white-mode .toggle {
+  background-color: hsl(0, 0%, 78%);
+}
+
+body.white-mode .toggle.active {
+  background-color: hsl(3, 86%, 64%);
 }

@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import Button from './components/Button';
 import Card from './components/Card';
 
 function App() {
   const [filter, setFilter] = useState('All');
+  const [whiteMode, setwhiteMode] = useState(false);
 
   const [extensions, setExtensions] = useState([
     { id: 1, imageUrl: '/assets/images/logo-devlens.svg', text: 'DevLens', paragraph: 'Quickly inspect page layouts and visualize element boundaries.', active: true },
@@ -20,6 +21,14 @@ function App() {
     { id: 11, imageUrl: '/assets/images/logo-dom-snapshot.svg', text: 'DOM Snapshot', paragraph: 'Capture and export DOM structures quickly.', active: true },
     { id: 12, imageUrl: '/assets/images/logo-console-plus.svg', text: 'ConsolePlus', paragraph: 'Enhanced developer console with advanced filtering and logging.', active: false },
   ]);
+
+  useEffect(() => {
+    if (whiteMode) {
+      document.body.classList.add('white-mode')
+    } else {
+      document.body.classList.remove('white-mode')
+    }
+  }, [whiteMode]);
 
   const toggleActive = (id) => {
     setExtensions((prev) =>
@@ -42,10 +51,17 @@ function App() {
   return (
     <>
       <div className='bar'>
-        <img src="/assets/images/logo.svg" />
-        <div className='sun'>
-          <img src="/assets/images/icon-sun.svg" />
+        <img 
+        src={whiteMode ? "/assets/images/logo.svg" : "/assets/images/logo_branca.svg"}
+        className={whiteMode ? "logo" : "logo logo--white"}
+        />
+
+        <div className='sun' onClick={() => setwhiteMode(!whiteMode)}>
+          <img
+            src={whiteMode ? "/assets/images/icon-moon.svg" : "/assets/images/icon-sun.svg"}
+          />
         </div>
+
       </div>
 
       <div className='titleFilterWrapper'>
